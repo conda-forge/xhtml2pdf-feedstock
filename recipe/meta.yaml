@@ -1,8 +1,8 @@
 {% set name = "xhtml2pdf" %}
-{% set version = "0.2.3" %}
+{% set version = "0.2.4" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "86a37e78d7a8d8bb2761746c3d559e12284d92c4d531b3a8a0f8fd632b436f82" %}
+{% set hash_value = "6793fbbdcb6bb8a4a70132966d8d95e95ea3498cdf0e82252d2b8e9aae34fcb5" %}
 
 package:
   name: '{{ name|lower }}'
