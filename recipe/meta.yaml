@@ -1,35 +1,28 @@
 {% set name = "xhtml2pdf" %}
 {% set version = "0.2.4" %}
-{% set file_ext = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash_value = "6793fbbdcb6bb8a4a70132966d8d95e95ea3498cdf0e82252d2b8e9aae34fcb5" %}
+{% set sha256 = "6793fbbdcb6bb8a4a70132966d8d95e95ea3498cdf0e82252d2b8e9aae34fcb5" %}
 
 package:
-  name: '{{ name|lower }}'
-  version: '{{ version }}'
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
-  '{{ hash_type }}': '{{ hash_value }}'
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win or py2k]
   entry_points:
     - pisa = xhtml2pdf.pisa:command
     - xhtml2pdf = xhtml2pdf.pisa:command
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - html5lib >=1.0
-    - pillow
-    - pip
-    - pypdf2
     - python
-    - reportlab >=3.0
+    - pip
     - setuptools
-    - six
   run:
     - html5lib >=1.0
     - pillow
