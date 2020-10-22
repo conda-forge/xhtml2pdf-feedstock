@@ -25,6 +25,7 @@ requirements:
     - setuptools
   run:
     - python
+    - arabic_reshaper
     - html5lib >=1.0
     - pillow
     - pypdf2
