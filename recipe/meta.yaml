@@ -12,7 +12,6 @@ source:
 
 build:
   number: 0
-  skip: true  # [win or py2k]
   entry_points:
     - pisa = xhtml2pdf.pisa:command
     - xhtml2pdf = xhtml2pdf.pisa:command
