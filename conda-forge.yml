@@ -1,2 +1,4 @@
 conda_forge_output_validation: true
 upload_on_branch: master
+bot:
+  automerge: true
