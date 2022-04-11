@@ -25,6 +25,8 @@ requirements:
     - arabic_reshaper >=2.1.0
     - html5lib >=1.0.1
     - pillow >=8.1.1
+    - pyhanko >=0.12.1
+    - pyhanko-certvalidator >=0.19.5
     - pypdf3 >=1.0.5
     - python-bidi >=0.4.2
     - reportlab >=3.5.53
@@ -33,7 +35,7 @@ requirements:
 test:
   imports:
     - xhtml2pdf
-    - xhtml2pdf.config
+    - xhtml2pdf.builders
   commands:
     - pip check
     - pisa --help
