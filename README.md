@@ -1,11 +1,11 @@
-About xhtml2pdf
-===============
+About xhtml2pdf-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xhtml2pdf-feedstock/blob/main/LICENSE.txt)
 
 Home: http://github.com/xhtml2pdf/xhtml2pdf
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xhtml2pdf-feedstock/blob/main/LICENSE.txt)
 
 Summary: PDF generator using HTML and CSS
 
