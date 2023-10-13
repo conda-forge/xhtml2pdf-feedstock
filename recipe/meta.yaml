@@ -1,45 +1,41 @@
 {% set name = "xhtml2pdf" %}
-{% set version = "0.2.8" %}
+{% set version = "0.2.11" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d8e1db3d8acc9ff8071718b89b8967abb561a15d74d2cbd1606539c6d17660c4
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/xhtml2pdf-{{ version }}.tar.gz
+  sha256: 1b81630a10eba833ddeda16933fd6625471f16b93c352d954f552e5a608e7465
 
 build:
-  number: 3
   entry_points:
     - pisa = xhtml2pdf.pisa:command
     - xhtml2pdf = xhtml2pdf.pisa:command
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
-    - arabic_reshaper >=2.1.0
-    - freetype-py <2.4,>=2.3.0
+    - python >=3.6
+    - arabic_reshaper >=3.0.0
     - html5lib >=1.0.1
     - pillow >=8.1.1
     - pyhanko >=0.12.1
     - pyhanko-certvalidator >=0.19.5
-    - pypdf3 >=1.0.5
+    - pypdf >=3.1.0
     - python-bidi >=0.4.2
-    - reportlab >=3.5.53
+    - reportlab >=3.5.53,<4
     - svglib >=1.2.1
 
 test:
   imports:
     - xhtml2pdf
-    - xhtml2pdf.builders
   commands:
     - pip check
     - pisa --help
