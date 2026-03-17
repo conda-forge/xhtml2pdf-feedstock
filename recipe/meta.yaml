@@ -1,5 +1,5 @@
 {% set name = "xhtml2pdf" %}
-{% set version = "0.2.16" %}
+{% set version = "0.2.17" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/xhtml2pdf-{{ version }}.tar.gz
-  sha256: 7391adac12afb086561667cdc8d6ef0ac4afe5097bd97383622d42b6343dee71
+  sha256: 09ddbc31aa0e38a16f2f3cb73be89af5f7c968c17a564afdd685d280e39c526d
 
 build:
   entry_points:
