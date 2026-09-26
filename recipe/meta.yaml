@@ -1,5 +1,5 @@
 {% set name = "xhtml2pdf" %}
-{% set version = "0.2.20" %}
+{% set version = "0.2.21" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/xhtml2pdf-{{ version }}.tar.gz
-  sha256: c00f3274ac2201c67e5f59b8cc9ea7517f0a125f63fc8da2bdc72403019bb029
+  sha256: c9b61611b9334040e27762fcdd3e8b98febf4b10cd916e108dfaf763d820907d
 
 build:
   entry_points:
